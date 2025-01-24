@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Email</title>
+    <style>
+        body {
+            background-color: #f5f0ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+        .container input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .container button {
+            padding: 10px 20px;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #5300d6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register Your Email</h2>
+        <form action="/" method="get" onsubmit="registerEmail(event)">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script>
+        function registerEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            window.location.href = `/register/${email}`;
+        }
+    </script>
+</body>
+</html>

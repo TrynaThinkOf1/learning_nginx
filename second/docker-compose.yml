@@ -1,0 +1,18 @@
+services:
+  flask_5001:
+    build: .
+    ports:
+      - "5001:5000"
+    restart: always
+
+  flask_5002:
+    build: .
+    ports:
+      - "5002:5000"
+    restart: always
+
+  flask_5003:
+    build: .
+    ports:
+      - "5003:5000"
+    restart: always
