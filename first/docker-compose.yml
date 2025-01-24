@@ -1,8 +1,6 @@
 # docker-compose up --build -d
 # ^ to build and start apps in the background
 
-version: '3'
-
 services:
   app1:
     build: .
